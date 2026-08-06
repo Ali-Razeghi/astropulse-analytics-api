@@ -1,0 +1,66 @@
+[project]
+name = "astropulse-analytics-api"
+version = "0.1.0"
+description = "Astronomy data integration and analytics platform built with FastAPI and NASA data services."
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+authors = [{ name = "Ali Razeghi" }]
+
+dependencies = [
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.30",
+    "pydantic>=2.7",
+    "pydantic-settings>=2.3",
+    "email-validator>=2.1",
+    "sqlalchemy[asyncio]>=2.0",
+    "alembic>=1.13",
+    "asyncpg>=0.29",           # async PostgreSQL driver (runtime)
+    "aiosqlite>=0.20",         # async SQLite driver (local/dev/tests)
+    "psycopg2-binary>=2.9",    # sync driver for Alembic against PostgreSQL
+    "httpx>=0.27",
+    "pandas>=2.2",
+    "bcrypt>=4.1",
+    "pyjwt>=2.8",
+    "python-multipart>=0.0.9", # required for file uploads / OAuth2 form
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.2",
+    "pytest-asyncio>=0.23",
+    "respx>=0.21",             # httpx request mocking
+    "ruff>=0.5",
+    "mypy>=1.10",
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+filterwarnings = ["ignore::DeprecationWarning"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+
+[tool.ruff.lint]
+# A pragmatic, widely-used rule set: pycodestyle, pyflakes, isort, bugbear,
+# pyupgrade, comprehensions.
+select = ["E", "F", "I", "B", "UP", "C4"]
+# B008 flags function calls in argument defaults, but ``Depends()`` /
+# ``Query()`` / ``File()`` in defaults is the intended FastAPI idiom.
+ignore = ["B008"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+plugins = ["pydantic.mypy"]
+ignore_missing_imports = true
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+# Discover ``app`` and all of its subpackages (app.api, app.core, ...).
+include = ["app*"]

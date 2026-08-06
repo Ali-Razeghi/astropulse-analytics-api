@@ -1,0 +1,48 @@
+{
+  "snapshot_type": "official NASA CCMC DONKI documented records",
+  "provider": "NASA CCMC DONKI",
+  "records": [
+    {
+      "time21_5": "2016-09-06T14:18Z",
+      "latitude": -20.0,
+      "longitude": 120.0,
+      "halfAngle": 31.0,
+      "speed_km_s": 674.0,
+      "type": "C",
+      "associatedCMEID": "2016-09-06T08:54:00-CME-001"
+    },
+    {
+      "time21_5": "2016-09-15T04:24Z",
+      "latitude": -18.0,
+      "longitude": -122.0,
+      "halfAngle": 43.0,
+      "speed_km_s": 722.0,
+      "type": "C",
+      "associatedCMEID": "2016-09-14T23:36:00-CME-001"
+    },
+    {
+      "time21_5": "2024-04-16T07:43Z",
+      "latitude": -37.0,
+      "longitude": -107.0,
+      "halfAngle": 13.0,
+      "speed_km_s": 837.0,
+      "associatedCMEID": "2024-04-16T03:24:00-CME-001"
+    },
+    {
+      "time21_5": "2024-04-16T12:33Z",
+      "latitude": 35.0,
+      "longitude": -95.0,
+      "halfAngle": 35.0,
+      "speed_km_s": 867.0,
+      "associatedCMEID": "2024-04-16T07:48:00-CME-001"
+    },
+    {
+      "time21_5": "2024-04-16T19:04Z",
+      "latitude": 54.0,
+      "longitude": null,
+      "halfAngle": 12.0,
+      "speed_km_s": 509.0,
+      "associatedCMEID": "2024-04-16T12:00:00-CME-001"
+    }
+  ]
+}
