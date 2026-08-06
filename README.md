@@ -94,11 +94,11 @@ API route
 
 The project follows a layered design:
 
-- **API layer** — HTTP routes and request dependencies
-- **Service layer** — business logic and transaction boundaries
-- **Repository layer** — database access
-- **Source adapters** — provider-specific collection and normalization
-- **Schema layer** — typed request and response contracts
+- **API layer**: HTTP routes and request dependencies
+- **Service layer**: business logic and transaction boundaries
+- **Repository layer**: database access
+- **Source adapters**: provider-specific collection and normalization
+- **Schema layer**: typed request and response contracts
 
 ## Engineering features
 
